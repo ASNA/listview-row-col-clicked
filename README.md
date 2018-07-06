@@ -2,11 +2,11 @@
 
 The [ListView](https://msdn.microsoft.com/en-us/library/bb398790.aspx) is a worthy alternative to the [GridView](https://msdn.microsoft.com/en-us/library/2s019wc0.aspx) control. With the ListView control, you are 100% in charge of the markup produced. This makes the ListView much better suited to pages where you need complete control over the markup, such as when you're using a CSS framwork like BootStrap. 
 
-However, the ListView's model for determining row clicks is quite different from the GridView. This article shows how to determine what row and column got clicked with the ListView. 
+However, the ListView's model for handling row clicks is quite different from the GridView. This article shows how to determine what row and column got clicked, on the server side, with the ListView. 
 
 ### The ListView's OnItemCommand property
 
-The OnItemCommand binds an event handler subroutine to the ListView's OnItemCommand event. Unlike a GridView, the ListView's internal controls (those defined in the ItemTemplate section) _do not_ fire their own intrinsic events. Instead, these controls events (which are usually click events) are channeled through the handler registered with the OnItemCommand. The OnItemCommand handler must include the two parameters shown below
+The OnItemCommand binds an event handler subroutine to the ListView's OnItemCommand event. Unlike a GridView, the ListView's internal controls (those defined in the ItemTemplate section) _do not_ fire their own intrinsic events. Instead, these controls events (which are usually click events) are channeled through the handler registered with the ListView's OnItemCommand event. The OnItemCommand handler must include the two parameters shown below
 
 	BegSr listviewCustomersRowAction Access(*Protected) 
         DclSrParm sender Type(*Object)
