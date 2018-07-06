@@ -1,0 +1,55 @@
+﻿Using System
+Using System.Collections.Generic
+Using System.Linq
+Using System.Data
+Using System.Configuration
+Using System.Web
+Using System.Web.Security
+Using System.Web.UI
+Using System.Web.UI.WebControls
+Using System.Web.UI.WebControls.WebParts
+Using System.Web.UI.HtmlControls
+
+/// <summary>
+/// Summary description for CustomerList
+/// </summary>
+BegClass CustomerList Access(*Public)
+
+	
+	BegFunc GetList Type(Customer) Rank(1) Access(*Public) 
+
+		DclFld Result Type(List(*Of Customer)) New()
+		DclFld Cust Type(Customer) 
+
+		Cust = *New Customer()
+		Cust.FirstName = 'Neil'
+		Cust.LastName = 'Young'
+		Cust.City = 'San Francisco'
+		Cust.State = 'CA'
+		Cust.ZipCode = 94105
+		Cust.Phone = '555-345-1234'
+		Result.Add(Cust) 
+
+		Cust = *New Customer()
+		Cust.FirstName = 'Stephen'
+		Cust.LastName = 'Stills'
+		Cust.City = 'Los Angeles'
+		Cust.State = 'CA'
+		Cust.ZipCode = 90005
+		Cust.Phone = '555-123-6767'
+		Result.Add(Cust) 
+
+		Cust = *New Customer()
+		Cust.FirstName = 'Richie'
+		Cust.LastName = 'Furay'
+		Cust.City = 'San Diego'
+		Cust.State = 'CA'
+		Cust.ZipCode = 92092
+		Cust.Phone = '555-456-8989'
+		Result.Add(Cust) 
+
+		LeaveSr Result.ToArray()	
+	EndFunc 
+
+
+EndClass

@@ -1,0 +1,25 @@
+﻿Using System
+Using System.Collections.Generic
+Using System.Linq
+Using System.Data
+Using System.Configuration
+Using System.Web
+Using System.Web.Security
+Using System.Web.UI
+Using System.Web.UI.WebControls
+Using System.Web.UI.WebControls.WebParts
+Using System.Web.UI.HtmlControls
+
+/// <summary>
+/// Summary description for Customer
+/// </summary>
+BegClass Customer Access(*Public)
+
+	DclProp FirstName Type(*String) Access(*Public) 
+	DclProp LastName Type(*String) Access(*Public) 
+	DclProp City Type(*String) Access(*Public) 
+	DclProp State Type(*String) Access(*Public) 
+	DclProp ZipCode Type(*Integer4) Access(*Public) 
+	DclProp Phone Type(*String) Access(*Public) 
+
+EndClass
